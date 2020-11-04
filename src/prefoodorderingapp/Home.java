@@ -25,6 +25,8 @@ public class Home extends javax.swing.JFrame {
             {
                 btnmaintance.setVisible(false);
                 btnOrdering.setVisible(false);
+                
+                
             }
         }
 
@@ -37,7 +39,12 @@ public class Home extends javax.swing.JFrame {
         //AssignMenu(String role);
         
         
-        
+        if ("Customer".equals(loginsession.UserType)){
+            jLabel5.setVisible(false);
+            jLabel6.setVisible(false);
+            btnchash.setVisible(false);
+            btnmaintance.setVisible(false);
+        }
         
         
         

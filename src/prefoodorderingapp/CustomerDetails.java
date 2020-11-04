@@ -97,7 +97,7 @@ public class CustomerDetails extends javax.swing.JFrame {
     public CustomerDetails() throws SQLException {
         initComponents();
         
-        fillTable();
+        //fillTable();
     }
 
     /**
@@ -374,6 +374,11 @@ public class CustomerDetails extends javax.swing.JFrame {
         try{
             Connection con = Connections.getConnection();
             String MyQuery = "SELECT * FROM users WHERE UserName='" + txtuseridsrch.getText()+"'";
+            JOptionPane.showMessageDialog(this, loginsession.UserName);
+            if ("Customer".equals(loginsession.UserType)){
+                MyQuery = "SELECT * FROM users WHERE UserName='" + loginsession.UserName +"'";
+            }
+            
             PreparedStatement pres = con.prepareStatement(MyQuery);
             pres.execute();
             
@@ -382,6 +387,9 @@ public class CustomerDetails extends javax.swing.JFrame {
         }
         
         String uIDs = txtuseridsrch.getText().toString();
+        if ("Customer".equals(loginsession.UserType)){
+            uIDs = loginsession.UserName;
+        }
         
        try {
             fillusertabelsrch(uIDs);

@@ -165,6 +165,7 @@ public class LoginPg extends javax.swing.JFrame {
                 uType = combotype.getSelectedItem().toString();
                 
                 loginsession.UserName = uName;
+                loginsession.UserType = combotype.getSelectedItem().toString();
                 
                 
                 new Home().setVisible(true);

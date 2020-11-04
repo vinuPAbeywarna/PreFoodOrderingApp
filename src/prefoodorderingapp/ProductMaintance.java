@@ -219,39 +219,39 @@ public class ProductMaintance extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("Product ID:");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(40, 170, 130, 50);
+        jLabel12.setBounds(40, 210, 130, 50);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel13.setText("Product Name:");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(10, 240, 180, 50);
+        jLabel13.setBounds(10, 280, 180, 50);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel14.setText("Price:");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(100, 300, 80, 50);
+        jLabel14.setBounds(100, 350, 80, 50);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel15.setText("Category:");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(60, 370, 120, 50);
+        jLabel15.setBounds(60, 410, 120, 50);
 
         comboptype.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         comboptype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rice & Curry", "Drinks", "Shorties" }));
         jPanel1.add(comboptype);
-        comboptype.setBounds(170, 380, 280, 40);
+        comboptype.setBounds(170, 420, 280, 40);
 
         txtp.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtp);
-        txtp.setBounds(170, 320, 280, 40);
+        txtp.setBounds(170, 360, 280, 40);
 
         txtpname.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtpname);
-        txtpname.setBounds(170, 250, 280, 40);
+        txtpname.setBounds(170, 290, 280, 40);
 
         txtpid.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtpid);
-        txtpid.setBounds(170, 170, 280, 40);
+        txtpid.setBounds(170, 210, 280, 40);
 
         btnsave.setBackground(new java.awt.Color(78, 205, 196));
         btnsave.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -262,7 +262,7 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnsave);
-        btnsave.setBounds(30, 490, 130, 50);
+        btnsave.setBounds(330, 470, 130, 50);
 
         jButton3.setBackground(new java.awt.Color(78, 205, 196));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -273,7 +273,7 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(150, 560, 120, 50);
+        jButton3.setBounds(170, 530, 130, 50);
 
         btncansel.setBackground(new java.awt.Color(246, 36, 89));
         btncansel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -284,7 +284,7 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btncansel);
-        btncansel.setBounds(1110, 700, 130, 50);
+        btncansel.setBounds(1100, 700, 130, 50);
 
         btnupdate.setBackground(new java.awt.Color(78, 205, 196));
         btnupdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -295,7 +295,7 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnupdate);
-        btnupdate.setBounds(180, 490, 130, 50);
+        btnupdate.setBounds(170, 470, 130, 50);
 
         btnremove.setBackground(new java.awt.Color(78, 205, 196));
         btnremove.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -306,7 +306,7 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnremove);
-        btnremove.setBounds(330, 490, 130, 50);
+        btnremove.setBounds(330, 530, 130, 50);
 
         btnclr.setBackground(new java.awt.Color(78, 205, 196));
         btnclr.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -358,7 +358,7 @@ public class ProductMaintance extends javax.swing.JFrame {
 
         try{                                        
             // TODO add your handling code here:
-            if ("".equals(txtpid.getText()) || "".equals(txtpname.getText()) || "".equals(txtp.getText())){
+            if (!txtpid.getText().isEmpty() || !txtpname.getText().isEmpty() || !txtp.getText().isEmpty()){
                 try{
                 Connection con = Connections.getConnection();
                 String MyQuery = "INSERT INTO proudcts (ProductID,ProductName,Price,Category) VALUES (?,?,?,?)";
@@ -371,11 +371,11 @@ public class ProductMaintance extends javax.swing.JFrame {
                 pres.execute();
                 JOptionPane.showMessageDialog(this, "Product is Saved");
                 
-            }catch(Exception ex){
-                JOptionPane.showMessageDialog(this, "Error");
-                JOptionPane.showMessageDialog(this,ex );
-                
-            }
+                }catch(Exception ex){
+                    JOptionPane.showMessageDialog(this, "Error");
+                    JOptionPane.showMessageDialog(this,ex );
+
+                }
             } else {
                 JOptionPane.showMessageDialog(this, "Fill the Relevent Fields");
             }
@@ -404,7 +404,7 @@ public class ProductMaintance extends javax.swing.JFrame {
 
     private void btnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdateActionPerformed
         // TODO add your handling code here:
-        if ("".equals(txtpid.getText()) || "".equals(txtpname.getText()) || "".equals(txtp.getText())){
+        if (!txtpid.getText().isEmpty() || !txtpname.getText().isEmpty() || !txtp.getText().isEmpty()){
             try{
             Connection con = Connections.getConnection();
             String MyQuery = "UPDATE proudcts SET ProductID =?,ProductName=?,Price=?,Category=? WHERE ProductID=?";
