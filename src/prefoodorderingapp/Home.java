@@ -18,12 +18,28 @@ import javax.swing.JFrame;
  * @author Vinu
  */
 public class Home extends javax.swing.JFrame {
+    
+    
+    public void AssignMenu(String role){
+            if(role.equals("Customer"))
+            {
+                btnmaintance.setVisible(false);
+                btnOrdering.setVisible(false);
+            }
+        }
 
     /**
      * Creates new form Home
      */
     public Home() {
         initComponents();
+        
+        //AssignMenu(String role);
+        
+        
+        
+        
+        
         
         ImageIcon myimage=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("164-1647148_transparent-food-clip-art-food-beverage-png.png")));
         

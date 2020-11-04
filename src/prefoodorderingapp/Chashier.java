@@ -118,7 +118,6 @@ public class Chashier extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btncancel = new javax.swing.JButton();
         btnclearo = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         lblpname = new javax.swing.JLabel();
         txtordersrch = new javax.swing.JTextField();
@@ -180,7 +179,7 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btncancel);
-        btncancel.setBounds(1120, 710, 130, 50);
+        btncancel.setBounds(870, 700, 130, 50);
 
         btnclearo.setBackground(new java.awt.Color(78, 205, 196));
         btnclearo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -192,11 +191,6 @@ public class Chashier extends javax.swing.JFrame {
         });
         jPanel1.add(btnclearo);
         btnclearo.setBounds(600, 120, 100, 40);
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel6.setText("Thank You....Come again...");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(180, 660, 320, 70);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel7.setText("Total:");
@@ -315,7 +309,7 @@ public class Chashier extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tabelorder);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(470, 220, 580, 370);
+        jScrollPane2.setBounds(310, 190, 640, 480);
 
         btnpay.setBackground(new java.awt.Color(78, 205, 196));
         btnpay.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -332,7 +326,7 @@ public class Chashier extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1323, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1065, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -488,7 +482,6 @@ public class Chashier extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

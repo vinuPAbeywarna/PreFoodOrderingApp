@@ -118,7 +118,6 @@ public class Ordering extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         txtqon = new javax.swing.JTextField();
-        lblbilldisply = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         comboptype = new javax.swing.JComboBox<>();
@@ -275,16 +274,6 @@ public class Ordering extends javax.swing.JFrame {
         txtqon.setText("0");
         jPanel5.add(txtqon);
         txtqon.setBounds(120, 730, 100, 50);
-
-        lblbilldisply.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lblbilldisply.setText("Click Here To Create Display Your Bill...");
-        lblbilldisply.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblbilldisplyMouseClicked(evt);
-            }
-        });
-        jPanel5.add(lblbilldisply);
-        lblbilldisply.setBounds(770, 650, 420, 60);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel17.setText("Quantity:");
@@ -448,20 +437,6 @@ public class Ordering extends javax.swing.JFrame {
         
     }//GEN-LAST:event_tableproductlistMouseClicked
 
-    private void lblbilldisplyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblbilldisplyMouseClicked
-        /*try {
-            // TODO add your handling code here:
-            Chashier ch = new Chashier();
-            ch.setVisible(true);
-            ch.pack();
-            ch.setLocationRelativeTo(null);
-            ch.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            this.dispose();
-        } catch (SQLException ex) {
-            Logger.getLogger(Ordering.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-    }//GEN-LAST:event_lblbilldisplyMouseClicked
-
     private void BTNCLEARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCLEARActionPerformed
         // TODO add your handling code here:
         comboptype.setSelectedItem(null);
@@ -523,7 +498,6 @@ public class Ordering extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JLabel lblbilldisply;
     private javax.swing.JLabel lblprice;
     private javax.swing.JLabel lbluid;
     private javax.swing.JLabel lbluid1;

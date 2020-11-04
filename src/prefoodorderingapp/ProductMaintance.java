@@ -19,6 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import net.proteanit.sql.DbUtils;
+import static prefoodorderingapp.CustomerDetails.buildTableModel;
 
 /**
  *
@@ -48,6 +49,24 @@ public class ProductMaintance extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
             //
         }
+    }
+    
+    public void fillproducttabelsrch(String Pids) throws SQLException {
+         try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = connect;
+            Statement stmt = con.createStatement();  
+            ResultSet rs = stmt.executeQuery("select * from proudcts where ProductID='"+ Pids +"'");
+            
+            producttable.setModel(buildTableModel(rs));
+            
+            
+        
+        }catch(ClassNotFoundException ex){
+              JOptionPane.showMessageDialog(this,ex );
+        }
+            
+            
     }
     
     public static DefaultTableModel buildTableModel(ResultSet rs)
@@ -179,7 +198,7 @@ public class ProductMaintance extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(490, 210, 740, 480);
         jPanel1.add(txtpidsrch);
-        txtpidsrch.setBounds(870, 110, 370, 40);
+        txtpidsrch.setBounds(620, 160, 380, 40);
 
         btnsrch.setBackground(new java.awt.Color(78, 205, 196));
         btnsrch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -195,7 +214,7 @@ public class ProductMaintance extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel10.setText("Product ID:");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(730, 110, 130, 50);
+        jLabel10.setBounds(490, 160, 130, 50);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("Product ID:");
@@ -218,9 +237,9 @@ public class ProductMaintance extends javax.swing.JFrame {
         jLabel15.setBounds(60, 370, 120, 50);
 
         comboptype.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        comboptype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Rice & Curry", "Drinks", "Shorties" }));
+        comboptype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rice & Curry", "Drinks", "Shorties" }));
         jPanel1.add(comboptype);
-        comboptype.setBounds(170, 390, 280, 40);
+        comboptype.setBounds(170, 380, 280, 40);
 
         txtp.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtp);
@@ -236,7 +255,7 @@ public class ProductMaintance extends javax.swing.JFrame {
 
         btnsave.setBackground(new java.awt.Color(78, 205, 196));
         btnsave.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnsave.setText("SAVE");
+        btnsave.setText("ADD");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsaveActionPerformed(evt);
@@ -298,7 +317,7 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnclr);
-        btnclr.setBounds(1130, 160, 90, 40);
+        btnclr.setBounds(1120, 160, 110, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -326,14 +345,21 @@ public class ProductMaintance extends javax.swing.JFrame {
             Logger.getLogger(ProductMaintance.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+         String Pids = txtpidsrch.getText().toString();
+        
+       try {
+            fillproducttabelsrch(Pids);
+        } catch (Exception ex) {
+            Logger.getLogger(Ordering.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnsrchActionPerformed
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
 
         try{                                        
             // TODO add your handling code here:
-            
-            try{
+            if ("".equals(txtpid.getText()) || "".equals(txtpname.getText()) || "".equals(txtp.getText())){
+                try{
                 Connection con = Connections.getConnection();
                 String MyQuery = "INSERT INTO proudcts (ProductID,ProductName,Price,Category) VALUES (?,?,?,?)";
                 PreparedStatement pres = con.prepareStatement(MyQuery);
@@ -350,6 +376,11 @@ public class ProductMaintance extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this,ex );
                 
             }
+            } else {
+                JOptionPane.showMessageDialog(this, "Fill the Relevent Fields");
+            }
+            
+            
             
             fillTable();
             //4...producttablevalues();
@@ -373,7 +404,8 @@ public class ProductMaintance extends javax.swing.JFrame {
 
     private void btnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdateActionPerformed
         // TODO add your handling code here:
-        try{
+        if ("".equals(txtpid.getText()) || "".equals(txtpname.getText()) || "".equals(txtp.getText())){
+            try{
             Connection con = Connections.getConnection();
             String MyQuery = "UPDATE proudcts SET ProductID =?,ProductName=?,Price=?,Category=? WHERE ProductID=?";
             PreparedStatement pres = con.prepareStatement(MyQuery);
@@ -390,6 +422,10 @@ public class ProductMaintance extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Something Went Wrong..!");
             JOptionPane.showMessageDialog(this,ex );
         }
+        } else {
+            JOptionPane.showMessageDialog(this, "Fill the Relevent Fields");
+        }
+        
         
         try {
             fillTable();
@@ -433,8 +469,13 @@ public class ProductMaintance extends javax.swing.JFrame {
     }//GEN-LAST:event_btnremoveActionPerformed
 
     private void btnclrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclrActionPerformed
-        // TODO add your handling code here:
-        txtpidsrch.setText(null);
+        try {
+            // TODO add your handling code here:
+            txtpidsrch.setText(null);
+            fillTable();
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductMaintance.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_btnclrActionPerformed
 

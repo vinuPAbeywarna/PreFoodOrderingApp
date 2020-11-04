@@ -31,6 +31,24 @@ public class CustomerDetails extends javax.swing.JFrame {
     
     ResultSet rs = null;
     
+    public void fillusertabelsrch(String uIDs) throws SQLException {
+         try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = connect;
+            Statement stmt = con.createStatement();  
+            ResultSet rs = stmt.executeQuery("select * from users where UserID='"+ uIDs +"'");
+            
+            userdetailtable.setModel(buildTableModel(rs));
+            
+            
+        
+        }catch(ClassNotFoundException ex){
+              JOptionPane.showMessageDialog(this,ex );
+        }
+            
+            
+    }
+    
     public void fillTable() throws SQLException{
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -331,8 +349,13 @@ public class CustomerDetails extends javax.swing.JFrame {
     }//GEN-LAST:event_btncancelActionPerformed
 
     private void btnuidclrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnuidclrActionPerformed
-        // TODO add your handling code here:
-        txtuseridsrch.setText(null);
+        try {
+            // TODO add your handling code here:
+            txtuseridsrch.setText(null);
+            fillTable();
+        } catch (SQLException ex) {
+            Logger.getLogger(CustomerDetails.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnuidclrActionPerformed
 
     private void btnuidserchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnuidserchActionPerformed
@@ -348,6 +371,24 @@ public class CustomerDetails extends javax.swing.JFrame {
         //} catch (SQLException ex) {
             //Logger.getLogger(CustomerDetails.class.getName()).log(Level.SEVERE, null, ex);
         //}
+        try{
+            Connection con = Connections.getConnection();
+            String MyQuery = "SELECT * FROM users WHERE UserName='" + txtuseridsrch.getText()+"'";
+            PreparedStatement pres = con.prepareStatement(MyQuery);
+            pres.execute();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductMaintance.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        String uIDs = txtuseridsrch.getText().toString();
+        
+       try {
+            fillusertabelsrch(uIDs);
+        } catch (Exception ex) {
+            Logger.getLogger(Ordering.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
         
         
         
