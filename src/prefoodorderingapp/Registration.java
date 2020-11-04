@@ -183,7 +183,8 @@ public class Registration extends javax.swing.JFrame {
         jLabel12.setBounds(60, 360, 130, 70);
 
         combotype.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        combotype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Admin", "Customer" }));
+        combotype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Customer" }));
+        combotype.setSelectedIndex(1);
         jPanel1.add(combotype);
         combotype.setBounds(240, 380, 370, 40);
 

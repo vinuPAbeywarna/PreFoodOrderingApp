@@ -36,7 +36,12 @@ public class CustomerDetails extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = connect;
             Statement stmt = con.createStatement();  
-            ResultSet rs = stmt.executeQuery("select * from users where UserID='"+ uIDs +"'");
+            //ResultSet rs = stmt.executeQuery("select * from users where UserID='"+ uIDs +"'");
+             if ("Customer".equals(loginsession.UserType)){
+                 rs = stmt.executeQuery("select * from users where UserName='"+ loginsession.UserName +"'");
+             } else {
+                 rs = stmt.executeQuery("select * from users where UserName='"+ uIDs +"'");
+             }
             
             userdetailtable.setModel(buildTableModel(rs));
             
@@ -54,7 +59,14 @@ public class CustomerDetails extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = connect;
             Statement stmt = con.createStatement();  
-            ResultSet rs = stmt.executeQuery("select * from users");
+            ResultSet rs;
+            if ("Customer".equals(loginsession.UserType)){
+                 rs = stmt.executeQuery("select * from users where UserName='"+ loginsession.UserName +"'");
+            } else {
+                 rs = stmt.executeQuery("select * from users");
+            }
+            
+            
             
             
             userdetailtable.setModel(buildTableModel(rs));
@@ -97,7 +109,7 @@ public class CustomerDetails extends javax.swing.JFrame {
     public CustomerDetails() throws SQLException {
         initComponents();
         
-        //fillTable();
+        fillTable();
     }
 
     /**
@@ -359,37 +371,9 @@ public class CustomerDetails extends javax.swing.JFrame {
     }//GEN-LAST:event_btnuidclrActionPerformed
 
     private void btnuidserchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnuidserchActionPerformed
-        //try {
-            //String userid = txtuid.getText().toString();
-            //String usrnm = txtuname.getText().toString();
-            //String usrpw = txtupw.getText().toString();
-            //String typ = comboutype.getSelectedItem().toString();
-            //String usremail = txtuid.getText().toString();
-            //String usrtele = txtuid.getText().toString();
-            
-            //fillTablesrch();
-        //} catch (SQLException ex) {
-            //Logger.getLogger(CustomerDetails.class.getName()).log(Level.SEVERE, null, ex);
-        //}
-        try{
-            Connection con = Connections.getConnection();
-            String MyQuery = "SELECT * FROM users WHERE UserName='" + txtuseridsrch.getText()+"'";
-            JOptionPane.showMessageDialog(this, loginsession.UserName);
-            if ("Customer".equals(loginsession.UserType)){
-                MyQuery = "SELECT * FROM users WHERE UserName='" + loginsession.UserName +"'";
-            }
-            
-            PreparedStatement pres = con.prepareStatement(MyQuery);
-            pres.execute();
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(ProductMaintance.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+
         String uIDs = txtuseridsrch.getText().toString();
-        if ("Customer".equals(loginsession.UserType)){
-            uIDs = loginsession.UserName;
-        }
+        
         
        try {
             fillusertabelsrch(uIDs);
