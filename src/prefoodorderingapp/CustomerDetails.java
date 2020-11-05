@@ -110,6 +110,25 @@ public class CustomerDetails extends javax.swing.JFrame {
         initComponents();
         
         fillTable();
+        
+         if ("Customer".equals(loginsession.UserType)){
+            jLabel8.setVisible(false);
+            jLabel6.setVisible(false);
+            jLabel12.setVisible(false);
+            jLabel7.setVisible(false);
+            jLabel9.setVisible(false);
+            jLabel10.setVisible(false);
+            btnsave.setVisible(false);
+            btnupdate.setVisible(false);
+            btndelete.setVisible(false);
+            btnreset.setVisible(false);
+            txtuid.setVisible(false);
+            txtuname.setVisible(false);
+            txtupw.setVisible(false);
+            txtuemail.setVisible(false);
+            txtutele.setVisible(false);
+            comboutype.setVisible(false);
+        }
     }
 
     /**
@@ -231,9 +250,9 @@ public class CustomerDetails extends javax.swing.JFrame {
         btnuidclr.setBounds(1070, 120, 130, 50);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel5.setText("ID No:");
+        jLabel5.setText("User Name:");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(410, 110, 80, 60);
+        jLabel5.setBounds(370, 110, 130, 60);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel8.setText("ID Number:");
@@ -304,7 +323,7 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnreset);
-        btnreset.setBounds(170, 690, 120, 50);
+        btnreset.setBounds(60, 690, 120, 50);
 
         btnsave.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnsave.setText("SAVE");
@@ -334,10 +353,10 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btndelete);
-        btndelete.setBounds(360, 630, 120, 50);
+        btndelete.setBounds(210, 690, 120, 50);
 
         comboutype.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        comboutype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Admin", "Customer" }));
+        comboutype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Customer" }));
         jPanel1.add(comboutype);
         comboutype.setBounds(170, 410, 320, 40);
 
@@ -416,51 +435,65 @@ public class CustomerDetails extends javax.swing.JFrame {
 
     private void btnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdateActionPerformed
         // TODO add your handling code here:
-        try{
-            Connection con = Connections.getConnection();
-            String MyQuery = "UPDATE users SET UserID =?,UserName=?,Password=?,UserType=?,Email=?,TelephoneNo=? WHERE UserID=?";
-            PreparedStatement pres = con.prepareStatement(MyQuery);
-            pres.setString(1, txtuid.getText());
-            pres.setString(2, txtuname.getText());
-            pres.setString(3, txtupw.getText());
-            pres.setString(4, comboutype.getSelectedItem().toString());
-            pres.setString(5, txtuemail.getText());
-            pres.setString(6, txtutele.getText());
-             pres.setString(7, txtuid.getText());
-            pres.execute();
-            JOptionPane.showMessageDialog(this, "User Recode is Updated");
+        try{                                        
+            // TODO add your handling code here:
+            if (!txtuid.getText().isEmpty() || !txtuname.getText().isEmpty() || !txtupw.getText().isEmpty()){
+                try{
+                    Connection con = Connections.getConnection();
+                    String MyQuery = "UPDATE users SET UserID =?,UserName=?,Password=?,UserType=?,Email=?,TelephoneNo=? WHERE UserID=?";
+                    PreparedStatement pres = con.prepareStatement(MyQuery);
+                    pres.setString(1, txtuid.getText());
+                    pres.setString(2, txtuname.getText());
+                    pres.setString(3, txtupw.getText());
+                    pres.setString(4, comboutype.getSelectedItem().toString());
+                    pres.setString(5, txtuemail.getText());
+                    pres.setString(6, txtutele.getText());
+                     pres.setString(7, txtuid.getText());
+                    pres.execute();
+                    JOptionPane.showMessageDialog(this, "User Recode is Updated");
 
-        } catch (Exception ex) {
-            ///Logger.getLogger(Maintance.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Something Went Wrong..!");
-            JOptionPane.showMessageDialog(this,ex );
-        }
-        try {
-            fillTable();
-        } catch (SQLException ex) {
-            Logger.getLogger(CustomerDetails.class.getName()).log(Level.SEVERE, null, ex);
-        }
+                } catch (Exception ex) {
+                    ///Logger.getLogger(Maintance.class.getName()).log(Level.SEVERE, null, ex);
+                    JOptionPane.showMessageDialog(null, "Something Went Wrong..!");
+                    JOptionPane.showMessageDialog(this,ex );
+                }
+        
+            } else {
+                    JOptionPane.showMessageDialog(this, "Fill the Relevent Fields");
+                }
+                    try {
+                        fillTable();
+                } catch (SQLException ex) {
+                    Logger.getLogger(CustomerDetails.class.getName()).log(Level.SEVERE, null, ex);
+                } 
+                    }
+        catch(Exception ex){}
+                    
     }//GEN-LAST:event_btnupdateActionPerformed
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
         // TODO add your handling code here:
-        try{
-            Connection con = Connections.getConnection();
-            String MyQuery = "DELETE FROM users WHERE UserID =?";
-            PreparedStatement pres = con.prepareStatement(MyQuery);
-            pres.setString(1, txtuid.getText());
-            pres.execute();
-            JOptionPane.showMessageDialog(this, "User Recode is Deleted");
+        if (!txtuid.getText().isEmpty()){
+            try{
+                Connection con = Connections.getConnection();
+                String MyQuery = "DELETE FROM users WHERE UserID =?";
+                PreparedStatement pres = con.prepareStatement(MyQuery);
+                pres.setString(1, txtuid.getText());
+                pres.execute();
+                JOptionPane.showMessageDialog(this, "User Recode is Deleted");
 
-        } catch (Exception ex) {
-            ///Logger.getLogger(Maintance.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Something Went Wrong..!");
-        }
-        try {
-            fillTable();
-        } catch (SQLException ex) {
-            Logger.getLogger(CustomerDetails.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            } catch (Exception ex) {
+                ///Logger.getLogger(Maintance.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(this, "Something Went Wrong..!");
+            }
+                try {
+                    fillTable();
+                } catch (SQLException ex) {
+                    Logger.getLogger(CustomerDetails.class.getName()).log(Level.SEVERE, null, ex);
+                }
+        } else {
+            JOptionPane.showMessageDialog(this, "Fill the Relevent Fields");
+        }        
     }//GEN-LAST:event_btndeleteActionPerformed
 
     private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresetActionPerformed

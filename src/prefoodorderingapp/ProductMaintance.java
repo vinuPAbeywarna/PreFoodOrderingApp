@@ -57,6 +57,11 @@ public class ProductMaintance extends javax.swing.JFrame {
             Connection con = connect;
             Statement stmt = con.createStatement();  
             ResultSet rs = stmt.executeQuery("select * from proudcts where ProductID='"+ Pids +"'");
+            if ("Customer".equals(loginsession.UserType)){
+                 rs = stmt.executeQuery("select * from proudcts where ProductID='"+ Pids +"'");
+             } else {
+                 rs = stmt.executeQuery("select * from proudcts where ProductID='"+ Pids +"'");
+             }
             
             producttable.setModel(buildTableModel(rs));
             
@@ -262,7 +267,7 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnsave);
-        btnsave.setBounds(330, 470, 130, 50);
+        btnsave.setBounds(170, 470, 130, 50);
 
         jButton3.setBackground(new java.awt.Color(78, 205, 196));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -295,7 +300,7 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnupdate);
-        btnupdate.setBounds(170, 470, 130, 50);
+        btnupdate.setBounds(330, 470, 130, 50);
 
         btnremove.setBackground(new java.awt.Color(78, 205, 196));
         btnremove.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -447,22 +452,26 @@ public class ProductMaintance extends javax.swing.JFrame {
 
     private void btnremoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnremoveActionPerformed
         // TODO add your handling code here:
-        try{
-            Connection con = Connections.getConnection();
-            String MyQuery = "DELETE FROM proudcts WHERE ProductID =?";
-            PreparedStatement pres = con.prepareStatement(MyQuery);
-            pres.setString(1, txtpid.getText());
-            pres.execute();
-            JOptionPane.showMessageDialog(this, "Product Recode is Deleted");
+        if (!txtpid.getText().isEmpty()|| !txtpname.getText().isEmpty() || !txtp.getText().isEmpty()){
+            try{
+                Connection con = Connections.getConnection();
+                String MyQuery = "DELETE FROM proudcts WHERE ProductID =?";
+                PreparedStatement pres = con.prepareStatement(MyQuery);
+                pres.setString(1, txtpid.getText());
+                pres.execute();
+                JOptionPane.showMessageDialog(this, "Product Recode is Deleted");
 
-        } catch (Exception ex) {
-            ///Logger.getLogger(Maintance.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Something Went Wrong..!");
-        }
-        try {
-            fillTable();
-        } catch (SQLException ex) {
-            Logger.getLogger(ProductMaintance.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                ///Logger.getLogger(Maintance.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(this, "Something Went Wrong..!");
+            }
+                try {
+                    fillTable();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ProductMaintance.class.getName()).log(Level.SEVERE, null, ex);
+                }
+        } else {
+            JOptionPane.showMessageDialog(this, "Fill the Relevent Fields");
         }
         
 
