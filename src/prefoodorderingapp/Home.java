@@ -110,7 +110,6 @@ public class Home extends javax.swing.JFrame {
         btnchash = new javax.swing.JButton();
         btnCustomerde = new javax.swing.JButton();
         btnOrdering = new javax.swing.JButton();
-        btncancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -213,22 +212,6 @@ public class Home extends javax.swing.JFrame {
         jPanel1.add(btnOrdering);
         btnOrdering.setBounds(820, 380, 190, 60);
 
-        btncancel.setBackground(new java.awt.Color(246, 36, 89));
-        btncancel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btncancel.setText("CANCEL");
-        btncancel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btncancelMouseClicked(evt);
-            }
-        });
-        btncancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncancelActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btncancel);
-        btncancel.setBounds(1040, 680, 130, 50);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -246,10 +229,6 @@ public class Home extends javax.swing.JFrame {
     private void btnmenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmenuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnmenuActionPerformed
-
-    private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btncancelActionPerformed
 
     private void btnmenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmenuMouseClicked
         try {
@@ -316,11 +295,6 @@ public class Home extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnchashMouseClicked
 
-    private void btncancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btncancelMouseClicked
-        // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_btncancelMouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -359,7 +333,6 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCustomerde;
     private javax.swing.JButton btnOrdering;
-    private javax.swing.JButton btncancel;
     private javax.swing.JButton btnchash;
     private javax.swing.JButton btnmaintance;
     private javax.swing.JButton btnmenu;

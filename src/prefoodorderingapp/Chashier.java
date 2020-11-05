@@ -344,6 +344,8 @@ public class Chashier extends javax.swing.JFrame {
     private void btnclearoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclearoActionPerformed
         // TODO add your handling code here:
         txtordersrch.setText(null);
+         //fillProductname(pname);
+        
     }//GEN-LAST:event_btnclearoActionPerformed
 
     private void btnordersrchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnordersrchActionPerformed
