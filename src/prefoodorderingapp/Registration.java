@@ -224,28 +224,32 @@ public class Registration extends javax.swing.JFrame {
 
     private void btnregActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregActionPerformed
         // TODO add your handling code here:
+        if (!txtid.getText().isEmpty() || !txtpw.getText().isEmpty() || !txtemail.getText().isEmpty() || !txtusername.getText().isEmpty() || !txtpw.getText().isEmpty()){
         
-        try{
-            Connection con = Connections.getConnection();
-            String MyQuery = "INSERT INTO users (UserID,UserName,Password,UserType,Email,TelephoneNo) VALUES (?,?,?,?,?,?)";
-            PreparedStatement pres = con.prepareStatement(MyQuery);
-            //ResultSet res =  pres.executeUpdate();
-            pres.setString(1, txtid.getText());
-            pres.setString(2, txtusername.getText());
-            pres.setString(3, txtpw.getText());
-            pres.setString(4, combotype.getSelectedItem().toString());
-            pres.setString(5, txtemail.getText());
-            pres.setString(6, txttele.getText());
-            pres.execute();
-            JOptionPane.showMessageDialog(this, "Your Registration is Successful");
+            try{
+                Connection con = Connections.getConnection();
+                String MyQuery = "INSERT INTO users (UserID,UserName,Password,UserType,Email,TelephoneNo) VALUES (?,?,?,?,?,?)";
+                PreparedStatement pres = con.prepareStatement(MyQuery);
+                //ResultSet res =  pres.executeUpdate();
+                pres.setString(1, txtid.getText());
+                pres.setString(2, txtusername.getText());
+                pres.setString(3, txtpw.getText());
+                pres.setString(4, combotype.getSelectedItem().toString());
+                pres.setString(5, txtemail.getText());
+                pres.setString(6, txttele.getText());
+                pres.execute();
+                JOptionPane.showMessageDialog(this, "Your Registration is Successful");
             
             
             
             
-        }catch(Exception ex){
-            JOptionPane.showMessageDialog(this, "Error");
-            JOptionPane.showMessageDialog(this,ex );
-            
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(this, "Error");
+                JOptionPane.showMessageDialog(this,ex );
+
+            }
+         } else {
+            JOptionPane.showMessageDialog(this, "Fill the Relevent Fields");
         }
         
         

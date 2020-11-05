@@ -38,7 +38,7 @@ public class CustomerDetails extends javax.swing.JFrame {
             Statement stmt = con.createStatement();  
             //ResultSet rs = stmt.executeQuery("select * from users where UserID='"+ uIDs +"'");
              if ("Customer".equals(loginsession.UserType)){
-                 rs = stmt.executeQuery("select * from users where UserName='"+ loginsession.UserName +"'");
+                 rs = stmt.executeQuery("select * from users where UserID='"+ loginsession.UserName +"'");
              } else {
                  rs = stmt.executeQuery("select * from users where UserName='"+ uIDs +"'");
              }
@@ -315,6 +315,7 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(txtuemail);
         txtuemail.setBounds(170, 490, 320, 40);
 
+        btnreset.setBackground(new java.awt.Color(78, 205, 196));
         btnreset.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnreset.setText("RESET");
         btnreset.addActionListener(new java.awt.event.ActionListener() {
@@ -323,8 +324,9 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnreset);
-        btnreset.setBounds(60, 690, 120, 50);
+        btnreset.setBounds(180, 690, 120, 50);
 
+        btnsave.setBackground(new java.awt.Color(78, 205, 196));
         btnsave.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnsave.setText("SAVE");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
@@ -333,8 +335,9 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnsave);
-        btnsave.setBounds(60, 630, 120, 50);
+        btnsave.setBounds(180, 630, 120, 50);
 
+        btnupdate.setBackground(new java.awt.Color(78, 205, 196));
         btnupdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnupdate.setText("UPDATE");
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
@@ -343,8 +346,9 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnupdate);
-        btnupdate.setBounds(210, 630, 120, 50);
+        btnupdate.setBounds(330, 630, 120, 50);
 
+        btndelete.setBackground(new java.awt.Color(78, 205, 196));
         btndelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btndelete.setText("DELETE");
         btndelete.addActionListener(new java.awt.event.ActionListener() {
@@ -353,7 +357,7 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btndelete);
-        btndelete.setBounds(210, 690, 120, 50);
+        btndelete.setBounds(330, 690, 120, 50);
 
         comboutype.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         comboutype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Customer" }));
