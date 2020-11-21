@@ -112,22 +112,22 @@ public class CustomerDetails extends javax.swing.JFrame {
         fillTable();
         
          if ("Customer".equals(loginsession.UserType)){
-            jLabel8.setVisible(false);
-            jLabel6.setVisible(false);
-            jLabel12.setVisible(false);
-            jLabel7.setVisible(false);
-            jLabel9.setVisible(false);
-            jLabel10.setVisible(false);
+            //jLabel8.setVisible(false);
+            //jLabel6.setVisible(false);
+            //jLabel12.setVisible(false);
+            //jLabel7.setVisible(false);
+            //jLabel9.setVisible(false);
+            //jLabel10.setVisible(false);
             btnsave.setVisible(false);
             btnupdate.setVisible(false);
             btndelete.setVisible(false);
             btnreset.setVisible(false);
-            txtuid.setVisible(false);
-            txtuname.setVisible(false);
-            txtupw.setVisible(false);
-            txtuemail.setVisible(false);
-            txtutele.setVisible(false);
-            comboutype.setVisible(false);
+            //txtuid.setVisible(false);
+            //txtuname.setVisible(false);
+            //txtupw.setVisible(false);
+            //txtuemail.setVisible(false);
+            //txtutele.setVisible(false);
+            //comboutype.setVisible(false);
         }
     }
 

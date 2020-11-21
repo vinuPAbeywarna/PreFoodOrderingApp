@@ -217,7 +217,7 @@ public class Ordering extends javax.swing.JFrame {
         lblprice.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblprice.setText("-----------");
         jPanel5.add(lblprice);
-        lblprice.setBounds(70, 680, 170, 40);
+        lblprice.setBounds(70, 670, 170, 40);
 
         lbluid.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbluid.setText("-------");

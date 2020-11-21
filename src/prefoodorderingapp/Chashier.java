@@ -207,7 +207,7 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(lblpname);
-        lblpname.setBounds(20, 460, 290, 40);
+        lblpname.setBounds(40, 460, 290, 40);
 
         txtordersrch.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtordersrch);
@@ -268,27 +268,27 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(lbloid);
-        lbloid.setBounds(20, 220, 290, 40);
+        lbloid.setBounds(40, 220, 290, 40);
 
         lbluoname.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbluoname.setText("------");
         jPanel1.add(lbluoname);
-        lbluoname.setBounds(20, 280, 290, 40);
+        lbluoname.setBounds(40, 280, 290, 40);
 
         lblopid.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblopid.setText("------");
         jPanel1.add(lblopid);
-        lblopid.setBounds(20, 350, 290, 40);
+        lblopid.setBounds(40, 350, 290, 40);
 
         lbloqon.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbloqon.setText("------");
         jPanel1.add(lbloqon);
-        lbloqon.setBounds(20, 400, 290, 40);
+        lbloqon.setBounds(40, 400, 290, 40);
 
         lblop.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblop.setText("------");
         jPanel1.add(lblop);
-        lblop.setBounds(20, 520, 290, 40);
+        lblop.setBounds(40, 520, 290, 40);
 
         lbltot.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbltot.setText("------");
