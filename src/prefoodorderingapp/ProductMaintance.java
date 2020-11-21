@@ -147,30 +147,31 @@ public class ProductMaintance extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(101, 198, 187));
 
-        jPanel1.setBackground(new java.awt.Color(101, 198, 187));
+        jPanel1.setBackground(new java.awt.Color(232, 236, 241));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(134, 226, 213));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel2.setBackground(new java.awt.Color(25, 118, 210));
 
-        jLabel3.setBackground(new java.awt.Color(162, 222, 208));
+        jLabel3.setBackground(new java.awt.Color(25, 118, 210));
         jLabel3.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 48)); // NOI18N
-        jLabel3.setText("MAINTANCE PAGE....");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Maintance");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(34, 34, 34)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(592, Short.MAX_VALUE))
+                .addContainerGap(576, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel2);
@@ -203,10 +204,11 @@ public class ProductMaintance extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(490, 210, 740, 480);
         jPanel1.add(txtpidsrch);
-        txtpidsrch.setBounds(620, 160, 380, 40);
+        txtpidsrch.setBounds(160, 120, 820, 40);
 
-        btnsrch.setBackground(new java.awt.Color(78, 205, 196));
+        btnsrch.setBackground(new java.awt.Color(25, 118, 210));
         btnsrch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnsrch.setForeground(new java.awt.Color(255, 255, 255));
         btnsrch.setText("SEARCH");
         btnsrch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,52 +216,53 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnsrch);
-        btnsrch.setBounds(1000, 160, 120, 40);
+        btnsrch.setBounds(990, 120, 120, 40);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel10.setText("Product ID:");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(490, 160, 130, 50);
+        jLabel10.setBounds(20, 120, 130, 50);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("Product ID:");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(40, 210, 130, 50);
+        jLabel12.setBounds(30, 190, 130, 50);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel13.setText("Product Name:");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(10, 280, 180, 50);
+        jLabel13.setBounds(30, 280, 180, 50);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel14.setText("Price:");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(100, 350, 80, 50);
+        jLabel14.setBounds(30, 370, 80, 50);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel15.setText("Category:");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(60, 410, 120, 50);
+        jLabel15.setBounds(30, 460, 120, 50);
 
         comboptype.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         comboptype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rice & Curry", "Drinks", "Shorties" }));
         jPanel1.add(comboptype);
-        comboptype.setBounds(170, 420, 280, 40);
+        comboptype.setBounds(30, 510, 430, 40);
 
         txtp.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtp);
-        txtp.setBounds(170, 360, 280, 40);
+        txtp.setBounds(30, 420, 430, 40);
 
         txtpname.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtpname);
-        txtpname.setBounds(170, 290, 280, 40);
+        txtpname.setBounds(30, 320, 430, 40);
 
         txtpid.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtpid);
-        txtpid.setBounds(170, 210, 280, 40);
+        txtpid.setBounds(30, 240, 430, 40);
 
-        btnsave.setBackground(new java.awt.Color(78, 205, 196));
+        btnsave.setBackground(new java.awt.Color(25, 118, 210));
         btnsave.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnsave.setForeground(new java.awt.Color(255, 255, 255));
         btnsave.setText("ADD");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,10 +270,11 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnsave);
-        btnsave.setBounds(170, 470, 130, 50);
+        btnsave.setBounds(70, 580, 130, 50);
 
-        jButton3.setBackground(new java.awt.Color(78, 205, 196));
+        jButton3.setBackground(new java.awt.Color(25, 118, 210));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("RESET");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -278,10 +282,11 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton3);
-        jButton3.setBounds(170, 530, 130, 50);
+        jButton3.setBounds(70, 650, 130, 50);
 
         btncansel.setBackground(new java.awt.Color(246, 36, 89));
         btncansel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btncansel.setForeground(new java.awt.Color(255, 255, 255));
         btncansel.setText("CANCEL");
         btncansel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -291,8 +296,9 @@ public class ProductMaintance extends javax.swing.JFrame {
         jPanel1.add(btncansel);
         btncansel.setBounds(1100, 700, 130, 50);
 
-        btnupdate.setBackground(new java.awt.Color(78, 205, 196));
+        btnupdate.setBackground(new java.awt.Color(25, 118, 210));
         btnupdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnupdate.setForeground(new java.awt.Color(255, 255, 255));
         btnupdate.setText("UPDATE");
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -300,10 +306,11 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnupdate);
-        btnupdate.setBounds(330, 470, 130, 50);
+        btnupdate.setBounds(250, 580, 130, 50);
 
-        btnremove.setBackground(new java.awt.Color(78, 205, 196));
+        btnremove.setBackground(new java.awt.Color(25, 118, 210));
         btnremove.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnremove.setForeground(new java.awt.Color(255, 255, 255));
         btnremove.setText("REMOVE");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,10 +318,11 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnremove);
-        btnremove.setBounds(330, 530, 130, 50);
+        btnremove.setBounds(250, 650, 130, 50);
 
-        btnclr.setBackground(new java.awt.Color(78, 205, 196));
+        btnclr.setBackground(new java.awt.Color(25, 118, 210));
         btnclr.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnclr.setForeground(new java.awt.Color(255, 255, 255));
         btnclr.setText("CLEAR");
         btnclr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -322,13 +330,13 @@ public class ProductMaintance extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnclr);
-        btnclr.setBounds(1120, 160, 110, 40);
+        btnclr.setBounds(1120, 120, 110, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1277, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1247, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

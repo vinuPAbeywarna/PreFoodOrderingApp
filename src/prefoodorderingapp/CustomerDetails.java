@@ -169,15 +169,16 @@ public class CustomerDetails extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(101, 198, 187));
+        jPanel1.setBackground(new java.awt.Color(232, 236, 241));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(134, 226, 213));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel2.setBackground(new java.awt.Color(25, 118, 210));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setBackground(new java.awt.Color(162, 222, 208));
         jLabel3.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 48)); // NOI18N
-        jLabel3.setText("USER DETAILS PAGE....");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("  User Details");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -186,12 +187,12 @@ public class CustomerDetails extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(632, Short.MAX_VALUE))
+                .addContainerGap(638, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
+                .addGap(0, 30, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -200,6 +201,7 @@ public class CustomerDetails extends javax.swing.JFrame {
 
         btncancel.setBackground(new java.awt.Color(246, 36, 89));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btncancel.setForeground(new java.awt.Color(255, 255, 255));
         btncancel.setText("CANCEL");
         btncancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,7 +209,7 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btncancel);
-        btncancel.setBounds(1090, 700, 130, 50);
+        btncancel.setBounds(1170, 700, 130, 50);
 
         userdetailtable.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         userdetailtable.setModel(new javax.swing.table.DefaultTableModel(
@@ -234,12 +236,13 @@ public class CustomerDetails extends javax.swing.JFrame {
         jScrollPane1.setViewportView(userdetailtable);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(510, 190, 730, 490);
+        jScrollPane1.setBounds(510, 190, 790, 490);
         jPanel1.add(txtuseridsrch);
-        txtuseridsrch.setBounds(510, 120, 370, 40);
+        txtuseridsrch.setBounds(180, 130, 810, 40);
 
-        btnuidclr.setBackground(new java.awt.Color(78, 205, 196));
+        btnuidclr.setBackground(new java.awt.Color(25, 118, 210));
         btnuidclr.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnuidclr.setForeground(new java.awt.Color(255, 255, 255));
         btnuidclr.setText("CLEAR");
         btnuidclr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,12 +250,12 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnuidclr);
-        btnuidclr.setBounds(1070, 120, 130, 50);
+        btnuidclr.setBounds(1170, 130, 130, 40);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel5.setText("User Name:");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(370, 110, 130, 60);
+        jLabel5.setBounds(40, 120, 130, 60);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel8.setText("ID Number:");
@@ -284,8 +287,9 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(jLabel10);
         jLabel10.setBounds(10, 560, 190, 30);
 
-        btnuidserch.setBackground(new java.awt.Color(78, 205, 196));
+        btnuidserch.setBackground(new java.awt.Color(25, 118, 210));
         btnuidserch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnuidserch.setForeground(new java.awt.Color(255, 255, 255));
         btnuidserch.setText("SEARCH");
         btnuidserch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,7 +297,7 @@ public class CustomerDetails extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnuidserch);
-        btnuidserch.setBounds(910, 120, 130, 50);
+        btnuidserch.setBounds(1020, 130, 130, 40);
 
         txtutele.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtutele);
@@ -315,8 +319,9 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(txtuemail);
         txtuemail.setBounds(170, 490, 320, 40);
 
-        btnreset.setBackground(new java.awt.Color(78, 205, 196));
+        btnreset.setBackground(new java.awt.Color(25, 118, 210));
         btnreset.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnreset.setForeground(new java.awt.Color(255, 255, 255));
         btnreset.setText("RESET");
         btnreset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -326,8 +331,9 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(btnreset);
         btnreset.setBounds(180, 690, 120, 50);
 
-        btnsave.setBackground(new java.awt.Color(78, 205, 196));
+        btnsave.setBackground(new java.awt.Color(25, 118, 210));
         btnsave.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnsave.setForeground(new java.awt.Color(255, 255, 255));
         btnsave.setText("SAVE");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,8 +343,9 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(btnsave);
         btnsave.setBounds(180, 630, 120, 50);
 
-        btnupdate.setBackground(new java.awt.Color(78, 205, 196));
+        btnupdate.setBackground(new java.awt.Color(25, 118, 210));
         btnupdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnupdate.setForeground(new java.awt.Color(255, 255, 255));
         btnupdate.setText("UPDATE");
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -348,8 +355,9 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(btnupdate);
         btnupdate.setBounds(330, 630, 120, 50);
 
-        btndelete.setBackground(new java.awt.Color(78, 205, 196));
+        btndelete.setBackground(new java.awt.Color(25, 118, 210));
         btndelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btndelete.setForeground(new java.awt.Color(255, 255, 255));
         btndelete.setText("DELETE");
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -395,6 +403,8 @@ public class CustomerDetails extends javax.swing.JFrame {
 
     private void btnuidserchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnuidserchActionPerformed
 
+        
+        
         String uIDs = txtuseridsrch.getText().toString();
         
         

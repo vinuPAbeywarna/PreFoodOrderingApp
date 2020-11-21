@@ -141,29 +141,29 @@ public class Chashier extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(101, 198, 187));
+        jPanel1.setBackground(new java.awt.Color(232, 236, 241));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(134, 226, 213));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel2.setBackground(new java.awt.Color(25, 118, 210));
 
         jLabel3.setBackground(new java.awt.Color(162, 222, 208));
         jLabel3.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 48)); // NOI18N
-        jLabel3.setText("CHASHIER PAGE....");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Chashier");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(632, Short.MAX_VALUE))
+                .addContainerGap(621, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
+                .addGap(0, 30, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -172,6 +172,7 @@ public class Chashier extends javax.swing.JFrame {
 
         btncancel.setBackground(new java.awt.Color(246, 36, 89));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btncancel.setForeground(new java.awt.Color(255, 255, 255));
         btncancel.setText("CANCEL");
         btncancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,10 +180,11 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btncancel);
-        btncancel.setBounds(870, 700, 130, 50);
+        btncancel.setBounds(920, 700, 130, 50);
 
-        btnclearo.setBackground(new java.awt.Color(78, 205, 196));
+        btnclearo.setBackground(new java.awt.Color(25, 118, 210));
         btnclearo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnclearo.setForeground(new java.awt.Color(255, 255, 255));
         btnclearo.setText("CLEAR");
         btnclearo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,12 +192,12 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnclearo);
-        btnclearo.setBounds(600, 120, 100, 40);
+        btnclearo.setBounds(960, 120, 100, 40);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel7.setText("Total:");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(30, 460, 70, 70);
+        jLabel7.setBounds(20, 580, 70, 50);
 
         lblpname.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblpname.setText("------");
@@ -205,14 +207,15 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(lblpname);
-        lblpname.setBounds(170, 350, 290, 40);
+        lblpname.setBounds(20, 460, 290, 40);
 
         txtordersrch.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jPanel1.add(txtordersrch);
-        txtordersrch.setBounds(100, 120, 370, 40);
+        txtordersrch.setBounds(100, 120, 730, 40);
 
-        btnordersrch.setBackground(new java.awt.Color(78, 205, 196));
+        btnordersrch.setBackground(new java.awt.Color(25, 118, 210));
         btnordersrch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnordersrch.setForeground(new java.awt.Color(255, 255, 255));
         btnordersrch.setText("SEARCH");
         btnordersrch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,7 +223,7 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnordersrch);
-        btnordersrch.setBounds(480, 120, 110, 40);
+        btnordersrch.setBounds(840, 120, 110, 40);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("Name:");
@@ -230,32 +233,32 @@ public class Chashier extends javax.swing.JFrame {
         j.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         j.setText("Name:");
         jPanel1.add(j);
-        j.setBounds(30, 240, 130, 50);
+        j.setBounds(20, 240, 60, 50);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel13.setText("Order ID:");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(30, 200, 100, 50);
+        jLabel13.setBounds(20, 180, 100, 50);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel16.setText("Product ID:");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(30, 270, 100, 50);
+        jLabel16.setBounds(20, 310, 100, 50);
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel18.setText("Price:");
         jPanel1.add(jLabel18);
-        jLabel18.setBounds(30, 380, 60, 40);
+        jLabel18.setBounds(20, 490, 60, 40);
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel19.setText("Product Name:");
         jPanel1.add(jLabel19);
-        jLabel19.setBounds(30, 340, 120, 50);
+        jLabel19.setBounds(20, 420, 120, 50);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel17.setText("Quantity:");
         jPanel1.add(jLabel17);
-        jLabel17.setBounds(30, 300, 90, 50);
+        jLabel17.setBounds(20, 370, 90, 50);
 
         lbloid.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbloid.setText("------");
@@ -265,32 +268,32 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(lbloid);
-        lbloid.setBounds(130, 210, 290, 40);
+        lbloid.setBounds(20, 220, 290, 40);
 
         lbluoname.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbluoname.setText("------");
         jPanel1.add(lbluoname);
-        lbluoname.setBounds(120, 240, 290, 40);
+        lbluoname.setBounds(20, 280, 290, 40);
 
         lblopid.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblopid.setText("------");
         jPanel1.add(lblopid);
-        lblopid.setBounds(130, 270, 290, 40);
+        lblopid.setBounds(20, 350, 290, 40);
 
         lbloqon.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbloqon.setText("------");
         jPanel1.add(lbloqon);
-        lbloqon.setBounds(120, 310, 290, 40);
+        lbloqon.setBounds(20, 400, 290, 40);
 
         lblop.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblop.setText("------");
         jPanel1.add(lblop);
-        lblop.setBounds(90, 380, 290, 40);
+        lblop.setBounds(20, 520, 290, 40);
 
         lbltot.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbltot.setText("------");
         jPanel1.add(lbltot);
-        lbltot.setBounds(110, 480, 290, 40);
+        lbltot.setBounds(90, 590, 220, 40);
 
         tabelorder.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tabelorder.setModel(new javax.swing.table.DefaultTableModel(
@@ -309,10 +312,11 @@ public class Chashier extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tabelorder);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(310, 190, 640, 480);
+        jScrollPane2.setBounds(330, 170, 730, 510);
 
-        btnpay.setBackground(new java.awt.Color(78, 205, 196));
+        btnpay.setBackground(new java.awt.Color(25, 118, 210));
         btnpay.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnpay.setForeground(new java.awt.Color(255, 255, 255));
         btnpay.setText("PAY");
         btnpay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,7 +324,7 @@ public class Chashier extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnpay);
-        btnpay.setBounds(30, 520, 220, 50);
+        btnpay.setBounds(20, 630, 290, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

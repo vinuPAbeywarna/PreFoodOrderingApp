@@ -29,7 +29,7 @@ public class Registration extends javax.swing.JFrame {
     public Registration() {
         initComponents();
         
-        ImageIcon myimage=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("reg.png")));
+        ImageIcon myimage=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("1.png")));
         
         Image img1=myimage.getImage();
         Image img2=img1.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),Image.SCALE_SMOOTH);
@@ -69,44 +69,45 @@ public class Registration extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(101, 198, 187));
+        jPanel1.setBackground(new java.awt.Color(232, 236, 241));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(134, 226, 213));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel2.setBackground(new java.awt.Color(25, 118, 210));
 
         jLabel3.setBackground(new java.awt.Color(162, 222, 208));
         jLabel3.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 48)); // NOI18N
-        jLabel3.setText("REGISTRATION....");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Registration");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(752, Short.MAX_VALUE))
+                .addContainerGap(740, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 14, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(-10, 0, 1350, 90);
 
         jLabelloginpage.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabelloginpage.setText("Click Here to Reditect to Login Page.......");
+        jLabelloginpage.setText(" Reditect to Login Page");
         jLabelloginpage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelloginpageMouseClicked(evt);
             }
         });
         jPanel1.add(jLabelloginpage);
-        jLabelloginpage.setBounds(670, 650, 440, 70);
+        jLabelloginpage.setBounds(790, 680, 260, 70);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel5.setText("User Name:");
@@ -145,6 +146,7 @@ public class Registration extends javax.swing.JFrame {
 
         btncancel.setBackground(new java.awt.Color(246, 36, 89));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btncancel.setForeground(new java.awt.Color(255, 255, 255));
         btncancel.setText("CANCEL");
         btncancel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -154,8 +156,9 @@ public class Registration extends javax.swing.JFrame {
         jPanel1.add(btncancel);
         btncancel.setBounds(440, 610, 130, 50);
 
-        btnreg.setBackground(new java.awt.Color(78, 205, 196));
+        btnreg.setBackground(new java.awt.Color(25, 118, 210));
         btnreg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnreg.setForeground(new java.awt.Color(255, 255, 255));
         btnreg.setText("REGISTER");
         btnreg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -175,7 +178,7 @@ public class Registration extends javax.swing.JFrame {
         jPanel1.add(jLabel11);
         jLabel11.setBounds(20, 100, 570, 60);
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(750, 210, 360, 380);
+        jLabel1.setBounds(650, 180, 360, 380);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("User Type:");
@@ -192,7 +195,7 @@ public class Registration extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1321, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1064, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

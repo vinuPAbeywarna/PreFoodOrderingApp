@@ -129,29 +129,29 @@ public class Ordering extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel5.setBackground(new java.awt.Color(101, 198, 187));
+        jPanel5.setBackground(new java.awt.Color(232, 236, 241));
         jPanel5.setLayout(null);
 
-        jPanel6.setBackground(new java.awt.Color(134, 226, 213));
-        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel6.setBackground(new java.awt.Color(25, 118, 210));
 
-        jLabel5.setBackground(new java.awt.Color(162, 222, 208));
+        jLabel5.setBackground(new java.awt.Color(25, 118, 210));
         jLabel5.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 48)); // NOI18N
-        jLabel5.setText("ORDERING PAGE....");
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Ordering");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(33, 33, 33)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(612, Short.MAX_VALUE))
+                .addContainerGap(597, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
+                .addGap(0, 30, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -160,6 +160,7 @@ public class Ordering extends javax.swing.JFrame {
 
         btncancel.setBackground(new java.awt.Color(246, 36, 89));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btncancel.setForeground(new java.awt.Color(255, 255, 255));
         btncancel.setText("CANCEL");
         btncancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,7 +168,7 @@ public class Ordering extends javax.swing.JFrame {
             }
         });
         jPanel5.add(btncancel);
-        btncancel.setBounds(1120, 720, 130, 50);
+        btncancel.setBounds(1140, 740, 130, 50);
 
         tableproductlist.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tableproductlist.setModel(new javax.swing.table.DefaultTableModel(
@@ -194,10 +195,11 @@ public class Ordering extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tableproductlist);
 
         jPanel5.add(jScrollPane1);
-        jScrollPane1.setBounds(20, 350, 630, 310);
+        jScrollPane1.setBounds(20, 300, 680, 360);
 
-        btnpsrch.setBackground(new java.awt.Color(78, 205, 196));
+        btnpsrch.setBackground(new java.awt.Color(25, 118, 210));
         btnpsrch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnpsrch.setForeground(new java.awt.Color(255, 255, 255));
         btnpsrch.setText("SEARCH");
         btnpsrch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,36 +207,38 @@ public class Ordering extends javax.swing.JFrame {
             }
         });
         jPanel5.add(btnpsrch);
-        btnpsrch.setBounds(320, 260, 110, 40);
+        btnpsrch.setBounds(480, 210, 110, 40);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setText("Cart");
         jPanel5.add(jLabel10);
-        jLabel10.setBounds(990, 100, 40, 50);
+        jLabel10.setBounds(820, 260, 40, 50);
 
         lblprice.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblprice.setText("-----------");
         jPanel5.add(lblprice);
-        lblprice.setBounds(110, 680, 170, 22);
+        lblprice.setBounds(70, 680, 170, 40);
 
         lbluid.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbluid.setText("-------");
         jPanel5.add(lbluid);
-        lbluid.setBounds(1010, 540, 160, 22);
+        lbluid.setBounds(880, 630, 160, 40);
 
-        btnremove.setBackground(new java.awt.Color(78, 205, 196));
+        btnremove.setBackground(new java.awt.Color(25, 118, 210));
         btnremove.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnremove.setText("Remove the Cart");
+        btnremove.setForeground(new java.awt.Color(255, 255, 255));
+        btnremove.setText("Clear the Cart");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnremoveActionPerformed(evt);
             }
         });
         jPanel5.add(btnremove);
-        btnremove.setBounds(840, 580, 200, 50);
+        btnremove.setBounds(820, 670, 220, 50);
 
-        btnorder.setBackground(new java.awt.Color(78, 205, 196));
+        btnorder.setBackground(new java.awt.Color(25, 118, 210));
         btnorder.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnorder.setForeground(new java.awt.Color(255, 255, 255));
         btnorder.setText("Order Now");
         btnorder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,10 +246,11 @@ public class Ordering extends javax.swing.JFrame {
             }
         });
         jPanel5.add(btnorder);
-        btnorder.setBounds(1070, 580, 130, 50);
+        btnorder.setBounds(1050, 670, 220, 50);
 
-        btnaddcart.setBackground(new java.awt.Color(78, 205, 196));
+        btnaddcart.setBackground(new java.awt.Color(25, 118, 210));
         btnaddcart.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnaddcart.setForeground(new java.awt.Color(255, 255, 255));
         btnaddcart.setText("ADD TO CART");
         btnaddcart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,52 +258,52 @@ public class Ordering extends javax.swing.JFrame {
             }
         });
         jPanel5.add(btnaddcart);
-        btnaddcart.setBounds(460, 680, 170, 50);
+        btnaddcart.setBounds(480, 670, 170, 50);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setText("Price:");
         jPanel5.add(jLabel12);
-        jLabel12.setBounds(30, 670, 60, 40);
+        jLabel12.setBounds(20, 670, 60, 40);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel14.setText("Total:");
         jPanel5.add(jLabel14);
-        jLabel14.setBounds(910, 520, 100, 60);
+        jLabel14.setBounds(820, 620, 100, 50);
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel16.setText("Products Category:");
         jPanel5.add(jLabel16);
-        jLabel16.setBounds(10, 200, 150, 60);
+        jLabel16.setBounds(20, 160, 150, 60);
 
         txtqon.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         txtqon.setText("0");
         jPanel5.add(txtqon);
-        txtqon.setBounds(120, 730, 100, 50);
+        txtqon.setBounds(370, 670, 100, 50);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel17.setText("Quantity:");
         jPanel5.add(jLabel17);
-        jLabel17.setBounds(30, 720, 90, 50);
+        jLabel17.setBounds(280, 670, 90, 50);
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel18.setText("Products:");
         jPanel5.add(jLabel18);
-        jLabel18.setBounds(20, 300, 120, 50);
+        jLabel18.setBounds(20, 250, 120, 50);
 
         comboptype.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         comboptype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rice & Curry", "Drinks", "Shorties" }));
         jPanel5.add(comboptype);
-        comboptype.setBounds(180, 220, 360, 30);
+        comboptype.setBounds(20, 210, 440, 40);
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel19.setText("User Name :");
         jPanel5.add(jLabel19);
-        jLabel19.setBounds(20, 140, 110, 60);
+        jLabel19.setBounds(20, 110, 110, 60);
 
         lbluid1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbluid1.setText("-------");
         jPanel5.add(lbluid1);
-        lbluid1.setBounds(130, 160, 350, 22);
+        lbluid1.setBounds(130, 130, 350, 22);
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
@@ -309,10 +314,11 @@ public class Ordering extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextArea1);
 
         jPanel5.add(jScrollPane3);
-        jScrollPane3.setBounds(790, 140, 450, 390);
+        jScrollPane3.setBounds(820, 300, 450, 320);
 
-        BTNCLEAR.setBackground(new java.awt.Color(78, 205, 196));
+        BTNCLEAR.setBackground(new java.awt.Color(25, 118, 210));
         BTNCLEAR.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        BTNCLEAR.setForeground(new java.awt.Color(255, 255, 255));
         BTNCLEAR.setText("CLEAR");
         BTNCLEAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,7 +326,7 @@ public class Ordering extends javax.swing.JFrame {
             }
         });
         jPanel5.add(BTNCLEAR);
-        BTNCLEAR.setBounds(450, 260, 100, 40);
+        BTNCLEAR.setBounds(600, 210, 100, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -330,9 +336,7 @@ public class Ordering extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 26, Short.MAX_VALUE))
+            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

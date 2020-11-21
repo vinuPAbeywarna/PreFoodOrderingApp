@@ -5,6 +5,9 @@
  */
 package prefoodorderingapp;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -21,6 +24,20 @@ public class LoginPg extends javax.swing.JFrame {
      */
     public LoginPg() {
         initComponents();
+        
+        ImageIcon myimage=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Group 6.png")));
+        
+        Image img1=myimage.getImage();
+        Image img2=img1.getScaledInstance(jLabel4.getWidth(), jLabel4.getHeight(),Image.SCALE_SMOOTH);
+        ImageIcon i=new ImageIcon(img2);
+        jLabel4.setIcon(i);
+        
+        ImageIcon image=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("LoginBack.jpg")));
+        
+        Image imga=image.getImage();
+        Image imgb=imga.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),Image.SCALE_SMOOTH);
+        ImageIcon x=new ImageIcon(imgb);
+        jLabel1.setIcon(x);
     }
 
     /**
@@ -33,36 +50,25 @@ public class LoginPg extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btncancel = new javax.swing.JButton();
         btnlogin = new javax.swing.JButton();
         txtpw = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtusername = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblreg = new javax.swing.JLabel();
         combotype = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(null);
 
-        btncancel.setBackground(new java.awt.Color(246, 36, 89));
-        btncancel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btncancel.setText("CANCEL");
-        btncancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncancelActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btncancel);
-        btncancel.setBounds(380, 490, 130, 50);
-
-        btnlogin.setBackground(new java.awt.Color(78, 205, 196));
+        btnlogin.setBackground(new java.awt.Color(25, 118, 210));
         btnlogin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnlogin.setForeground(new java.awt.Color(255, 255, 255));
         btnlogin.setText("LOGIN");
         btnlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,70 +76,77 @@ public class LoginPg extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnlogin);
-        btnlogin.setBounds(210, 490, 130, 50);
+        btnlogin.setBounds(80, 440, 130, 50);
 
         txtpw.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        txtpw.setToolTipText("Password");
         jPanel1.add(txtpw);
-        txtpw.setBounds(180, 380, 370, 40);
+        txtpw.setBounds(80, 390, 370, 40);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(25, 118, 210));
         jLabel7.setText("Password:");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(50, 360, 110, 70);
+        jLabel7.setBounds(80, 350, 110, 30);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(25, 118, 210));
         jLabel5.setText("User Type:");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(40, 230, 130, 70);
+        jLabel5.setBounds(80, 170, 130, 50);
 
         txtusername.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtusername.setToolTipText("User Name");
         jPanel1.add(txtusername);
-        txtusername.setBounds(180, 310, 370, 40);
-
-        jLabel3.setBackground(new java.awt.Color(162, 222, 208));
-        jLabel3.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 36)); // NOI18N
-        jLabel3.setText("WELCOME TO OUR LOGIN PAGE ");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(10, 110, 580, 70);
+        txtusername.setBounds(80, 310, 370, 40);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(25, 118, 210));
         jLabel8.setText("User Name:");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(30, 290, 130, 70);
+        jLabel8.setBounds(80, 270, 130, 40);
 
-        jLabel2.setFont(new java.awt.Font("Ravie", 1, 48)); // NOI18N
-        jLabel2.setText("FAST FOODS...");
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(25, 118, 210));
+        jLabel2.setText("FAST FOODS");
+        jLabel2.setOpaque(true);
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(30, -20, 530, 130);
+        jLabel2.setBounds(100, 70, 320, 110);
 
         lblreg.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lblreg.setText("Click Here To Create New Account.....");
+        lblreg.setForeground(new java.awt.Color(25, 118, 210));
+        lblreg.setText("Create New Account");
         lblreg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblregMouseClicked(evt);
             }
         });
         jPanel1.add(lblreg);
-        lblreg.setBounds(140, 640, 420, 60);
+        lblreg.setBounds(80, 490, 230, 60);
 
         combotype.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         combotype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Admin", "Customer" }));
         jPanel1.add(combotype);
-        combotype.setBounds(180, 240, 370, 50);
+        combotype.setBounds(80, 220, 370, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prefoodorderingapp/aaa1.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prefoodorderingapp/Group 6.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(40, 60, 450, 490);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prefoodorderingapp/LoginBack.jpg"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 1260, 770);
+        jLabel1.setBounds(0, 0, 1070, 580);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1261, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1065, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 766, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -181,11 +194,6 @@ public class LoginPg extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnloginActionPerformed
 
-    private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_btncancelActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -222,12 +230,11 @@ public class LoginPg extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btncancel;
     private javax.swing.JButton btnlogin;
     private javax.swing.JComboBox<String> combotype;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

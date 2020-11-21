@@ -48,7 +48,7 @@ public class Home extends javax.swing.JFrame {
         
         
         
-        ImageIcon myimage=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("164-1647148_transparent-food-clip-art-food-beverage-png.png")));
+        ImageIcon myimage=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Group 1.png")));
         
         Image img1=myimage.getImage();
         Image img2=img1.getScaledInstance(jLabel1.getWidth(), jLabel1.getHeight(),Image.SCALE_SMOOTH);
@@ -56,7 +56,7 @@ public class Home extends javax.swing.JFrame {
         jLabel1.setIcon(i);
         
         
-        ImageIcon image=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("folder_customer_91730.jpg")));
+        ImageIcon image=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Group 2.png")));
         
         Image imga=image.getImage();
         Image imgb=imga.getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(),Image.SCALE_SMOOTH);
@@ -64,7 +64,7 @@ public class Home extends javax.swing.JFrame {
         jLabel2.setIcon(x);
         
         
-        ImageIcon imageorder=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("download (3).png")));
+        ImageIcon imageorder=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Group 3.png")));
         
         Image img3=imageorder.getImage();
         Image img4=img3.getScaledInstance(jLabel4.getWidth(), jLabel4.getHeight(),Image.SCALE_SMOOTH);
@@ -72,7 +72,7 @@ public class Home extends javax.swing.JFrame {
         jLabel4.setIcon(y);
         
         
-        ImageIcon imagemain=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("DocumentManagementIcon1-01.png")));
+        ImageIcon imagemain=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Group 4.png")));
         
         Image img5=imagemain.getImage();
         Image img6=img5.getScaledInstance(jLabel5.getWidth(), jLabel5.getHeight(),Image.SCALE_SMOOTH);
@@ -80,7 +80,7 @@ public class Home extends javax.swing.JFrame {
         jLabel5.setIcon(z);
         
         
-        ImageIcon imagepay=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("man-cashier-cash-register-supermarket-vector-illustration-145320934.jpg")));
+        ImageIcon imagepay=new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Group 5.png")));
         
         Image img7=imagepay.getImage();
         Image img8=img7.getScaledInstance(jLabel6.getWidth(), jLabel6.getHeight(),Image.SCALE_SMOOTH);
@@ -113,15 +113,15 @@ public class Home extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(101, 198, 187));
+        jPanel1.setBackground(new java.awt.Color(232, 236, 241));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(134, 226, 213));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jPanel2.setBackground(new java.awt.Color(25, 118, 210));
 
         jLabel3.setBackground(new java.awt.Color(162, 222, 208));
         jLabel3.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 48)); // NOI18N
-        jLabel3.setText("HOME PAGE....");
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Dashboard");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -130,31 +130,32 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(642, Short.MAX_VALUE))
+                .addContainerGap(648, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 14, Short.MAX_VALUE)
+                .addGap(0, 20, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 1240, 90);
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(70, 180, 230, 200);
+        jLabel1.setBounds(70, 140, 210, 200);
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(390, 180, 270, 190);
+        jLabel2.setBounds(430, 140, 210, 200);
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(780, 170, 240, 200);
+        jLabel4.setBounds(780, 140, 210, 200);
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(240, 470, 250, 200);
+        jLabel5.setBounds(250, 460, 210, 200);
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(610, 470, 270, 190);
+        jLabel6.setBounds(600, 460, 210, 200);
 
-        btnmenu.setBackground(new java.awt.Color(78, 205, 196));
+        btnmenu.setBackground(new java.awt.Color(25, 118, 210));
         btnmenu.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnmenu.setText("FOOD & Drinks");
+        btnmenu.setForeground(new java.awt.Color(255, 255, 255));
+        btnmenu.setText("Food & Drinks");
         btnmenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnmenuMouseClicked(evt);
@@ -166,10 +167,11 @@ public class Home extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnmenu);
-        btnmenu.setBounds(70, 390, 210, 60);
+        btnmenu.setBounds(70, 350, 210, 60);
 
-        btnmaintance.setBackground(new java.awt.Color(78, 205, 196));
+        btnmaintance.setBackground(new java.awt.Color(25, 118, 210));
         btnmaintance.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnmaintance.setForeground(new java.awt.Color(255, 255, 255));
         btnmaintance.setText("Maintance");
         btnmaintance.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -177,10 +179,11 @@ public class Home extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnmaintance);
-        btnmaintance.setBounds(300, 680, 130, 50);
+        btnmaintance.setBounds(250, 670, 210, 60);
 
-        btnchash.setBackground(new java.awt.Color(78, 205, 196));
+        btnchash.setBackground(new java.awt.Color(25, 118, 210));
         btnchash.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnchash.setForeground(new java.awt.Color(255, 255, 255));
         btnchash.setText("Chashier");
         btnchash.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -188,35 +191,38 @@ public class Home extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnchash);
-        btnchash.setBounds(670, 680, 130, 50);
+        btnchash.setBounds(600, 670, 210, 60);
 
-        btnCustomerde.setBackground(new java.awt.Color(78, 205, 196));
+        btnCustomerde.setBackground(new java.awt.Color(25, 118, 210));
         btnCustomerde.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnCustomerde.setText("User Details");
+        btnCustomerde.setForeground(new java.awt.Color(255, 255, 255));
+        btnCustomerde.setText("Users");
         btnCustomerde.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCustomerdeMouseClicked(evt);
             }
         });
         jPanel1.add(btnCustomerde);
-        btnCustomerde.setBounds(430, 390, 210, 60);
+        btnCustomerde.setBounds(430, 350, 210, 60);
 
-        btnOrdering.setBackground(new java.awt.Color(78, 205, 196));
+        btnOrdering.setBackground(new java.awt.Color(25, 118, 210));
         btnOrdering.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnOrdering.setText("Ordering Details");
+        btnOrdering.setForeground(new java.awt.Color(255, 255, 255));
+        btnOrdering.setText("Orders");
+        btnOrdering.setBorder(null);
         btnOrdering.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnOrderingMouseClicked(evt);
             }
         });
         jPanel1.add(btnOrdering);
-        btnOrdering.setBounds(820, 380, 190, 60);
+        btnOrdering.setBounds(780, 350, 210, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1242, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1055, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
