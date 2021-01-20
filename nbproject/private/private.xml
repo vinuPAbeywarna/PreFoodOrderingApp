@@ -5,13 +5,12 @@
         <group>
             <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/Registration.java</file>
             <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/loginsession.java</file>
-            <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/OrderObj.java</file>
-            <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/Home.java</file>
             <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/LoginPg.java</file>
-            <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/ProductMaintance.java</file>
+            <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/Home.java</file>
+            <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/Connections.java</file>
             <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/Chashier.java</file>
             <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/CustomerDetails.java</file>
-            <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/Menu.java</file>
+            <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/logout.java</file>
             <file>file:/C:/Users/Vinu/Documents/NetBeansProjects/PreFoodOrderingApp/src/prefoodorderingapp/Ordering.java</file>
         </group>
     </open-files>
