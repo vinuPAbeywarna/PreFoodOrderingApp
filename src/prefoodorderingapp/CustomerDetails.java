@@ -129,6 +129,14 @@ public class CustomerDetails extends javax.swing.JFrame {
             //txtutele.setVisible(false);
             //comboutype.setVisible(false);
         }
+        else
+         {
+            jLabel5.setVisible(false); 
+            txtuseridsrch.setVisible(false);
+            btnuidserch.setVisible(false);
+            btnuidclr.setVisible(false);
+            
+         }
     }
 
     /**
